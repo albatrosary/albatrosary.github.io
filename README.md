@@ -57,3 +57,7 @@ https://username.github.io/
 ### サービスワーカーを確認する
 
 chrome://inspect/#service-workers
+
+### サンプル
+
+https://github.com/mdn/sw-test
