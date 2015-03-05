@@ -53,3 +53,7 @@ http://username.github.io/
 ### https でアクセスする
 
 https://username.github.io/
+
+### サービスワーカーを確認する
+
+chrome://inspect/#service-workers
