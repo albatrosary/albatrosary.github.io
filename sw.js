@@ -7,14 +7,15 @@ var urlsToCache = [
   '/script/main.js'
 ];
 
-self.addEventListener('install', function(event) {
+this.addEventListener('install', function(event) {
+  
   console.log('install');
   // インストール処理
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
+  // event.waitUntil(
+  //   caches.open(CACHE_NAME)
+  //     .then(function(cache) {
+  //       console.log('Opened cache');
+  //       return cache.addAll(urlsToCache);
+  //     })
+  // );
 });
