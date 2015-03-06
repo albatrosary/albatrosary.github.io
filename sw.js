@@ -1,26 +1,4 @@
-// importScripts('serviceworker-cache-polyfill.js');
-
 console.log('sw');
-
-// var CACHE_NAME = 'my-site-cache-v1';
-// var urlsToCache = [
-//   '/',
-//   '/styles/main.css',
-//   '/script/main.js'
-// ];
-
-// this.addEventListener('install', function(event) {
-  
-//   console.log('install');
-//   インストール処理
-//   event.waitUntil(
-//     caches.open(CACHE_NAME)
-//       .then(function(cache) {
-//         console.log('Opened cache');
-//         return cache.addAll(urlsToCache);
-//       })
-//   );
-// });
 
 // example usage:
 self.addEventListener('install', function(event) {
