@@ -1,14 +1,16 @@
-self.onfetch = function(event) {
-  console.log('got a request');
+self.addEventListener('push', function(event) {  
+  console.log('Received a push message', event);
 
-  var salutation = 'Hello, ';
-  var whom = decodeURIComponent(event.request.url.match(/\/([^/]*)$/)[1]);
-  var energy_level = (whom == 'Cleveland')
-      ? '!!!' // take it up to 11
-      : '!';
-  var version = '\n\n(Version 1)';
+  var title = 'Yay a message.';  
+  var body = 'We have received a push message.';  
+  var icon = '/images/icon-192x192.png';  
+  var tag = 'simple-push-demo-notification-tag';
 
-  var body = new Blob([salutation, whom, energy_level, version]);
-
-  event.respondWith(new Response(body));
-};
+  event.waitUntil(  
+    self.registration.showNotification(title, {  
+      body: body,  
+      icon: icon,  
+      tag: tag  
+    })  
+  );  
+});
