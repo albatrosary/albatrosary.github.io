@@ -23,6 +23,7 @@
   function subscript() {
     navigator.serviceWorker.ready
     .then(function(sw) {
+      console.log('subscript');
       sw.pushManager.subscript().then(function(sub){
         sub.subscriptionId;
         sub.endpoint;
