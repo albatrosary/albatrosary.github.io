@@ -24,6 +24,11 @@
     navigator.serviceWorker.ready
     .then(function(sw) {
       console.log('subscript');
+      sw.pushManager.subscribe()
+      .then(function(sub){
+        sub.subscriptionId;
+        sub.endpoint;
+      })
     });
   }
 
