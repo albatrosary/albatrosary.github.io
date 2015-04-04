@@ -1,8 +1,3 @@
-console.log('sw');
-
-
 self.onfetch = function(event) {
-  
-  console.log('fetch');
-
+  console.log('got a request');
 };
