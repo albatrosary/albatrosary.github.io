@@ -5,15 +5,31 @@
   <body>
     <script>
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js', {scope: '/'}).then(function(registration) {
-    // 登録成功
-    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-  }).catch(function(err) {
-    // 登録失敗 :(
-    console.log('ServiceWorker registration failed: ', err);
+function register () {
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', {scope: '/'}).then(function(registration) {
+      // 登録成功
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+
+    }).catch(function(err) {
+      // 登録失敗 :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }  
+}
+
+
+function unregister() {
+  registration.inregister ().then(function() {
+    console.log('unregister');
   });
 }
+
     </script>
+
+    <button onclick="register()">register</button>
+    <button onclick="unregister()">register</button>
+
   </body>
 </html>
