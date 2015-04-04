@@ -5,15 +5,36 @@
   <meta charset="UTF-8">
   <title></title>
   <script>
-navigator.serviceWorker.register('sw.js', {scope: '/'})
-.then(function(sw){
-  console.log('service worker registered');
-})
+var register = function () {
+  navigator.serviceWorker.register('sw.js', {scope: '/'})
+  .then(function(sw){
+    console.log('service worker registered');
+  });
+}
+
+function unregister() {
+  navigator.serviceWorker.unregister ().then(function() {
+       console.log('unregister');
+  }
+});
+
+var pushed = function () {
+  navigator.serviceWorker.ready()
+  .then(function(sw){
+    sw.pushManager.subscribe()
+    .then(function(sub){
+      console.log(sub);
+      sub.subscriptionId;
+      sub.endpoint;
+    })
+  });
+}
+
   </script>   
   </head>
   <body>
-    <button class="js-push-button" disabled>Enable Push Message</button>      
-    <div id="subscription_id"></div>
-    <div id="subscription_endpoint"></div>                                               
+    <button onclick="register()">register</button>
+    <button onclick="unregister()">register</button>
+    <button onclick="pushed()">pushed</button>                                    
   </body>
  </html>
