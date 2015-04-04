@@ -20,6 +20,16 @@
       });
   }
 
+  function subscript() {
+    navigator.serviceWorker.ready
+    .then(function(sw) {
+      sw.pushManager.subscript().then(function(sub){
+        sub.subscriptionId;
+        sub.endpoint;
+      })
+    });
+  }
+
   function unregister() {
     registration.unregister()
       .then(function() {
@@ -31,5 +41,6 @@
   <body>
     <button onclick="register()">Register</button>
     <button onclick="unregister()">Unregister</button>
+    <button onclick="subscript()">subscript</button>
   </body>
 </html>
