@@ -1,4 +1,11 @@
-self.addEventListener('push', function(event) {  
+console.log('sw.js');
+
+self.onfetch = function(event) {
+  console.log('self.onfetch', event);
+}
+
+self.addEventListener('push', function(event) {
+
   console.log('Received a push message', event);
 
   var title = 'Yay a message.';  
