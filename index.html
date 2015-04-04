@@ -23,6 +23,9 @@ var pushed = function () {
   navigator.serviceWorker.ready
   .then(function(sw){
     console.log(sw);
+    
+    debugger;
+    
     sw.pushManager.subscribe()
     .then(function(sub){
       console.log(sub);
