@@ -4,7 +4,7 @@ self.onfetch = function(event) {
   console.log('self.onfetch', event);
 }
 
-self.addEventListener('push', function(event) {
+self.onpush = function(event) {
 
   console.log('Received a push message', event);
 
@@ -20,4 +20,4 @@ self.addEventListener('push', function(event) {
       tag: tag  
     })  
   );  
-});
+}
