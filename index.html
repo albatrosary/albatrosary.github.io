@@ -13,10 +13,11 @@ var register = function () {
 }
 
 function unregister() {
-  navigator.serviceWorker.unregister ().then(function() {
+  navigator.serviceWorker.unregister().
+  then(function() {
        console.log('unregister');
-  }
-});
+  });
+}
 
 var pushed = function () {
   navigator.serviceWorker.ready()
