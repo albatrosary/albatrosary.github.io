@@ -1,5 +1,5 @@
 console.log('sw');
-
+console.log(self);
 // example usage:
 self.oninstall = function(event) {
   
