@@ -1,7 +1,7 @@
 console.log('sw');
 
 // example usage:
-self.addEventListener('install', function(event) {
+self.oninstall = function(event) {
   
   console.log('install');
   
@@ -13,7 +13,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
-self.addEventListener('fetch', function(event) {
+self.onfetch = function(event) {
   
   console.log('fetch');
 
