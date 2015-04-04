@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <title></title>
     <script>
-  var scope = '/';
   var registration;
 
   function register() {
-    navigator.serviceWorker.register('sw.js', {scope: scope})
+    navigator.serviceWorker.register('sw.js', {scope: '/'})
       .then(function(r) {
         console.log('registered: ');
         registration = r;
