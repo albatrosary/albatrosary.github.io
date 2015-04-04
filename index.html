@@ -20,7 +20,7 @@ var unregister = function unregister() {
 }
 
 var pushed = function () {
-  navigator.serviceWorker.ready()
+  navigator.serviceWorker.ready
   .then(function(sw){
     sw.pushManager.subscribe()
     .then(function(sub){
