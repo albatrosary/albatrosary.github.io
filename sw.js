@@ -7,6 +7,7 @@ self.addEventListener('install', function(event) {
   
   event.waitUntil(
     caches.open('demo-cache').then(function(cache) {
+    console.log('install');
       return cache.put('/', new Response("From the cache!"));
     })
   );
