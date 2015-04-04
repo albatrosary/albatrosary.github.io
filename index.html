@@ -90,7 +90,8 @@ function subscribe() {
         isPushEnabled = true;  
         pushButton.textContent = 'Disable Push Messages';  
         pushButton.disabled = false;      
-          
+        
+        console.log('pushButton.disabled = false; ');
         // TODO: Send the subscription.subscriptionId and   
         // subscription.endpoint to your server  
         // and save it to send a push message at a later date   
