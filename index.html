@@ -21,7 +21,7 @@ function register () {
 
 
 function unregister() {
-  registration.inregister ().then(function() {
+  registration.unregister ().then(function() {
     console.log('unregister');
   });
 }
@@ -29,7 +29,7 @@ function unregister() {
     </script>
 
     <button onclick="register()">register</button>
-    <button onclick="unregister()">register</button>
+    <button onclick="unregister()">unregister</button>
 
   </body>
 </html>
