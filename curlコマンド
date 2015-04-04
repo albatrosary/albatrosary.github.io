@@ -1,0 +1,1 @@
+ curl --header "Authorization: key=AIzaSyDO948aq_ekdFGrPBc9D1GUoFIBwTLer-o" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"988526883410\"]}"
