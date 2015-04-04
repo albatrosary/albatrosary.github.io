@@ -12,7 +12,7 @@ var register = function () {
   });
 }
 
-function unregister() {
+var unregister = function unregister() {
   navigator.serviceWorker.unregister().
   then(function() {
        console.log('unregister');
