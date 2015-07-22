@@ -1,5 +1,7 @@
 # albatrosary.github.io
 
+[![Join the chat at https://gitter.im/albatrosary/albatrosary.github.io](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/albatrosary/albatrosary.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### github pages を作成
 
 username.github.io リポジトリを作成する
